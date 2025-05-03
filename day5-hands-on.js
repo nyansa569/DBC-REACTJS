@@ -5,7 +5,6 @@
 </head>
 <body>
   <script>
-    // Template Literals (30 minutes)
     const users = [
       { name: "Alice", age: 25 },
       { name: "Bob", age: 30 }
@@ -14,7 +13,6 @@
     const formattedUsers = users.map(user => `Name: ${user.name}, Age: ${user.age}`);
     formattedUsers.forEach(str => console.log(str));
 
-    // Promises and Error Handling (30 minutes)
     const loadData = () => {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -23,12 +21,10 @@
       });
     };
 
-    // Using .then and .catch
     loadData()
       .then(msg => console.log(msg))
       .catch(err => console.error(err));
 
-    // Using async/await with try/catch
     const loadDataAsync = async () => {
       try {
         const msg = await loadData();
@@ -40,7 +36,6 @@
 
     loadDataAsync();
 
-    // Fetch API with Async/Await (60 minutes)
     const fetchUser = async (id) => {
       try {
         const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
@@ -54,8 +49,8 @@
       }
     };
 
-    fetchUser(1);   // Valid ID
-    fetchUser(999); // Likely invalid ID
+    fetchUser(1);
+    fetchUser(999);
   </script>
 </body>
 </html>
